@@ -7,4 +7,5 @@ To start backend:
 2. npm run dev
 
 To start frontend:
+
 type "python main.py" or "uvicorn main:app"
