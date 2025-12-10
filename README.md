@@ -5,8 +5,8 @@ To start backend:
    
    venv\Scripts\activate (for windows)
 
-2. npm run dev
+2. type "python main.py" or "uvicorn main:app"
 
 To start frontend:
 
-1. type "python main.py" or "uvicorn main:app"
+1. npm run dev
