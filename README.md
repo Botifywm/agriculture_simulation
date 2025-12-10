@@ -1,7 +1,8 @@
 To start backend:
 
 1. go to terminal and start virtual environment:
-   source venv/bin/activate (for mac)
+   source venv/bin/activate (for mac) or
+   
    venv\Scripts\activate (for windows)
 
 2. npm run dev
