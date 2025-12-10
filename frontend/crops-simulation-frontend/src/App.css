@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: #2e7d32;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px 20px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+  background-color: #ddf5c1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tab.active {
+  background: #2e7d32;
+  color: white;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+/* Main Content */
+.main-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+/* Common Elements */
+h2 {
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+h3 {
+  color: #333;
+  margin: 25px 0 15px 0;
+  font-size: 1.4rem;
+}
+
+h4 {
+  color: #555;
+  margin: 20px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #f5f5f5;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.crop-name {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.efficiency {
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Forms */
+form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #2e7d32;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Option Group (Radio buttons) */
+.option-group {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.option-group input[type="radio"] {
+  width: auto;
+  cursor: pointer;
+}
+
+/* Results Section */
+.results {
+  margin-top: 30px;
+}
+
+/* Chart Section */
+.chart-section {
+  margin-bottom: 1rem;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.chart-controls {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.chart-controls label {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.chart-controls select {
+  width: auto;
+  min-width: 200px;
+}
+
+/* Summary Table */
+.summary-section {
+  margin-top: 30px;
+}
+
+.summary-table {
+  max-width: 1fr;
+}
+
+.summary-table td:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Comparison Tables */
+.comparison-tables {
+  margin-top: 30px;
+}
+
+.comparison-table {
+  margin-bottom: 30px;
+}
+
+.comparison-table th:first-child {
+  width: 30%;
+}
+
+.comparison-table td.better {
+  background: #e8f5e9;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.comparison-table td.worse {
+  background: #ffebee;
+  color: #666;
+}
+
+/* Ratio Section */
+.ratio-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.ratio-table {
+  max-width: 1fr;
+}
+
+.ratio-table td:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+.ratio-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
