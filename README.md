@@ -8,4 +8,4 @@ To start backend:
 
 To start frontend:
 
-type "python main.py" or "uvicorn main:app"
+1. type "python main.py" or "uvicorn main:app"
